@@ -1,0 +1,51 @@
+<!-- components/consent-modal.html -->
+<div id="consentModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-md hidden">
+
+    <div class="bg-stone-700 text-stone-100 rounded-3xl max-w-2xl w-full mx-4 max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+
+        <div class="bg-amber-300 text-stone-800 px-8 py-4 rounded-t-3xl flex-shrink-0">
+            <h2 class="text-2xl font-semibold text-center">Согласие на обработку персональных данных</h2>
+        </div>
+
+        <div class="px-8 py-6 overflow-y-auto flex-1 text-stone-200 text-[15px] leading-relaxed">
+            <p class="mb-6"><strong>Дата вступления в силу:</strong> 29 марта 2026 г.</p>
+            
+            <p class="mb-4">Настоящая Политика определяет порядок обработки и защиты персональных данных клиентов сервиса <strong>ФОТО-КОПИ ЦЕНТР</strong>.</p>
+            
+            <h3 class="font-semibold mt-6 mb-2">1. Сведения об Операторе</h3>
+            <p>[Ваше ФИО полностью]<br>Телефон: +7 (XXX) XXX-XX-XX<br>E-mail: [ваша почта]</p>
+
+            <h3 class="font-semibold mt-6 mb-2">2. Цели обработки</h3>
+            <p>Переводы документов со всех языков на русский, заверение печатью переводчика, фото на документы, ксерокопия, связь с клиентом.</p>
+
+            <h3 class="font-semibold mt-6 mb-2">3. Какие данные собираются</h3>
+            <p>ФИО, телефон, e-mail, сканированные копии документов.</p>
+
+            <h3 class="font-semibold mt-6 mb-2">4. Как обрабатываются данные</h3>
+            <p>Данные из формы сразу отправляются мне на почту и <strong>не хранятся на сайте</strong>. Переводы выполняются от 1 дня. После выполнения заказа все файлы удаляются в течение 30 дней.</p>
+
+            <h3 class="font-semibold mt-6 mb-2">5. Передача третьим лицам</h3>
+            <p>Ваши данные не передаются никому, кроме переводчика.</p>
+
+            <h3 class="font-semibold mt-6 mb-2">6. Ваши права</h3>
+            <p>Вы можете в любое время отозвать согласие, написав мне.</p>
+
+            <p class="mt-8 text-center">
+                <a href="politika-konfidentsialnosti.html" target="_blank" class="inline-flex items-center gap-2 text-amber-300 hover:text-amber-400 underline">
+                    📄 Ознакомиться с полной версией Политики конфиденциальности
+                </a>
+            </p>
+        </div>
+
+        <div class="bg-stone-800 px-8 py-5 rounded-b-3xl flex items-center justify-between flex-shrink-0 border-t border-stone-600">
+            <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" id="consentCheckbox" class="w-5 h-5 accent-amber-400">
+                <span class="text-sm">Я ознакомился и согласен с Политикой обработки персональных данных</span>
+            </label>
+
+            <button id="consentButton" onclick="acceptConsent()" disabled class="px-10 py-3.5 rounded-3xl font-semibold transition-all bg-stone-600 text-stone-400 cursor-not-allowed">
+                Продолжить
+            </button>
+        </div>
+    </div>
+</div>

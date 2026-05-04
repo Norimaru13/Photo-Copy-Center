@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги — ФОТО-КОПИ ЦЕНТР</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        darkMode: 'class',
+    }
+</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alice:wght@400;500;600;700&display=swap');
+        body { font-family: 'Alice', serif; }
+        * {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+
+        body {
+            transition-duration: 300ms;
+        }
+    </style>
+</head>
+<body class="bg-stone-200 text-stone-800 dark:bg-stone-950 dark:text-stone-100">
+
+    <div id="header"></div>
+
+        <section class="max-w-7xl mx-auto px-6 py-20">
+        <h1 class="text-4xl font-semibold text-center mb-4 dark:text-stone-100">Наши услуги</h1>
+        <p class="text-center text-stone-500 mb-16 dark:text-stone-400">Профессиональные услуги с гарантией качества</p>
+
+        <!-- Градиентный блок -->
+        <div class="bg-gradient-to-r from-amber-300 to-orange-400 rounded-3xl p-8 md:p-12 dark:from-orange-950 dark:to-amber-800">
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white rounded-3xl p-8 shadow hover:shadow-xl transition-all hover:-translate-y-1 text-center dark:bg-stone-800 dark:text-stone-100">
+                    <div class="text-5xl mb-6 text-amber-600">📄</div>
+                    <h3 class="text-2xl font-semibold mb-3">Переводы документов</h3>
+                    <p class="text-stone-600 dark:text-stone-400">Переводы со всех языков на русский. Выполняем от 1 рабочего дня. Точный перевод документов.</p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow hover:shadow-xl transition-all hover:-translate-y-1 text-center dark:bg-stone-800 dark:text-stone-100">
+                    <div class="text-5xl mb-6 text-amber-600">🔖</div>
+                    <h3 class="text-2xl font-semibold mb-3">Заверение печатью переводчика</h3>
+                    <p class="text-stone-600 dark:text-stone-400">Официальное заверение переводов печатью переводчика.</p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow hover:shadow-xl transition-all hover:-translate-y-1 text-center dark:bg-stone-800 dark:text-stone-100">
+                    <div class="text-5xl mb-6 text-amber-600">📸</div>
+                    <h3 class="text-2xl font-semibold mb-3">Фотография на документы</h3>
+                    <p class="text-stone-600 dark:text-stone-400">Профессиональное фото на любые документы.</p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow hover:shadow-xl transition-all hover:-translate-y-1 text-center dark:bg-stone-800 dark:text-stone-100">
+                    <div class="text-5xl mb-6 text-amber-600">🖨️</div>
+                    <h3 class="text-2xl font-semibold mb-3">Ксерокопия</h3>
+                    <p class="text-stone-600 dark:text-stone-400">Качественная ксерокопия и сканирование документов.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl p-8 shadow hover:shadow-xl transition-all hover:-translate-y-1 text-center dark:bg-stone-800 dark:text-stone-100">
+                <div class="text-5xl mb-6 text-amber-600">💻</div>
+                <h3 class="text-2xl font-semibold mb-3">Проектирование и создание сайтов</h3>
+                <p class="text-stone-600 dark:text-stone-400">Создание современных сайтов под ключ. Цена от 10 000 ₽.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-stone-800 text-amber-100 py-10 text-center text-sm">
+        © 2026 ФОТО-КОПИ ЦЕНТР. Все права защищены.
+        <div class="mt-4">
+            <a href="politika-konfidentsialnosti.html" class="text-sky-300 hover:text-sky-200 underline">Политика обработки персональных данных</a>
+        </div>
+    </footer>
+
+        <script>
+        fetch('components/header.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('header').innerHTML = html;
+                
+                // Инициализация тумблера (тема)
+                const toggle = document.getElementById('themeToggle');
+                const icon = document.getElementById('themeIcon');
+                if (toggle && icon) {
+                    if (localStorage.getItem('theme') === 'dark' || 
+                        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                        toggle.checked = true;
+                        document.documentElement.classList.add('dark');
+                        icon.classList.replace('fa-sun', 'fa-moon');
+                    }
+                    toggle.addEventListener('change', () => {
+                        if (toggle.checked) {
+                            document.documentElement.classList.add('dark');
+                            localStorage.setItem('theme', 'dark');
+                            icon.classList.replace('fa-sun', 'fa-moon');
+                        } else {
+                            document.documentElement.classList.remove('dark');
+                            localStorage.setItem('theme', 'light');
+                            icon.classList.replace('fa-moon', 'fa-sun');
+                        }
+                    });
+                }
+            });
+    </script>
+</body>
+</html>

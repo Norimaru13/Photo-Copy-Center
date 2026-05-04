@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ФОТО-КОПИ ЦЕНТР</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        darkMode: 'class',
+    }
+</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alice:wght@400;500;600;700&display=swap');
+        body { font-family: 'Alice', serif; }
+
+        .hero-bg { background: linear-gradient(135deg, #44403c 0%, #854d0e 100%); }
+        .accent-yellow { color: #f5e8c7; }
+
+        /* Мягкая полоса скролла */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #e2e8f0; border-radius: 9999px; }
+        ::-webkit-scrollbar-thumb { background: #64748b; border-radius: 9999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+        * {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+
+        body {
+            transition-duration: 300ms;
+        }
+                /* ← НОВОЕ: тёмный градиент для геро-блока */
+        .dark .hero-bg {
+    background: linear-gradient(135deg, #451a03 0%, #b45309 100%);
+        }
+    </style>
+    
+</head>
+<body class="bg-stone-200 text-stone-800 dark:bg-stone-950 dark:text-stone-100">
+
+    <!-- Общий хедер -->
+    <div id="header"></div>
+
+    <!-- ГЕРО-БЛОК -->
+    <!-- ← ЗАМЕНИТЬ НА ЭТО -->
+    <section class="hero-bg text-amber-50 py-24 dark:from-stone-900 dark:to-amber-950">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-semibold leading-tight mb-6">
+                Быстрые и точные переводы<br>документов со всех языков на русский
+            </h1>
+            <p class="text-2xl accent-yellow mb-10">Официально • Надёжно • От 1 рабочего дня</p>
+            
+            <div class="flex flex-wrap justify-center gap-4">
+            <a href="prices.html" 
+            class="bg-amber-200 text-stone-800 px-10 py-4 rounded-3xl font-semibold text-xl hover:shadow-2xl transition border-2 border-amber-300/60 dark:bg-amber-400 dark:text-stone-900">
+                Смотреть цены
+            </a>
+            <a href="services.html" 
+            class="border-2 border-amber-50 px-10 py-4 rounded-3xl font-semibold text-xl hover:bg-amber-50 hover:text-stone-800 transition border-2 border-amber-300/60 dark:border-amber-100 dark:hover:bg-amber-200 dark:hover:text-stone-900">
+                Все услуги
+            </a>
+        </div>
+            
+            <div class="mt-12 flex items-center justify-center gap-3 text-amber-100 text-xl dark:text-amber-200">
+                <i class="fas fa-phone"></i>
+                <span class="font-medium">+7 (XXX) XXX-XX-XX</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- НАШИ УСЛУГИ -->
+    <!-- ← ЗАМЕНИТЬ НА ЭТО -->
+    <section class="max-w-7xl mx-auto px-6 py-20">
+        <h2 class="text-4xl font-semibold text-center mb-12 dark:text-stone-100">Наши услуги</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <a href="prices.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition group block aspect-square flex flex-col items-center justify-center text-center border-2 border-amber-300/60 hover:border-amber-300 dark:bg-stone-800 dark:text-stone-100">
+                <div class="text-5xl mb-6 text-amber-600 group-hover:scale-110 transition">📄</div>
+                <h3 class="text-2xl font-semibold">Переводы документов</h3>
+            </a>
+
+            <a href="prices.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition group block aspect-square flex flex-col items-center justify-center text-center border-2 border-amber-300/60 hover:border-amber-300 dark:bg-stone-800 dark:text-stone-100">
+                <div class="text-5xl mb-6 text-amber-600 group-hover:scale-110 transition">🔖</div>
+                <h3 class="text-2xl font-semibold">Заверение печатью переводчика</h3>
+            </a>
+
+            <a href="prices.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition group block aspect-square flex flex-col items-center justify-center text-center border-2 border-amber-300/60 hover:border-amber-300 dark:bg-stone-800 dark:text-stone-100">
+                <div class="text-5xl mb-6 text-amber-600 group-hover:scale-110 transition">📸</div>
+                <h3 class="text-2xl font-semibold">Фотография на документы</h3>
+            </a>
+
+            <a href="prices.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition group block aspect-square flex flex-col items-center justify-center text-center border-2 border-amber-300/60 hover:border-amber-300 dark:bg-stone-800 dark:text-stone-100">
+                <div class="text-5xl mb-6 text-amber-600 group-hover:scale-110 transition">🖨️</div>
+                <h3 class="text-2xl font-semibold">Ксерокопия</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- ДАВАЙТЕ РАБОТАТЬ ВМЕСТЕ -->
+    <!-- ← ЗАМЕНИТЬ НА ЭТО -->
+    <section id="contacts" class="max-w-7xl mx-auto px-6 py-20 bg-stone-300 rounded-t-3xl dark:bg-stone-900">
+        <h2 class="text-4xl font-semibold text-center mb-12 dark:text-stone-100">Давайте работать вместе</h2>
+        
+        <form action="https://formsubmit.co/badgirlmarik@yandex.ru" method="POST" class="grid md:grid-cols-2 gap-12">
+            <div class="space-y-6">
+                <div>
+                    <label class="block text-stone-600 mb-3 font-medium dark:text-stone-400">Выберите услугу (только одну)</label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <label class="service-label flex items-center gap-3 bg-white border-2 border-transparent rounded-3xl px-6 py-4 cursor-pointer hover:border-amber-200 transition-all dark:bg-stone-700 dark:text-stone-100">
+                            <input type="radio" name="service" value="Перевод документа" required class="accent-amber-400 peer">
+                            <span class="peer-checked:font-semibold peer-checked:text-amber-700">Перевод документа</span>
+                        </label>
+                        <label class="service-label flex items-center gap-3 bg-white border-2 border-transparent rounded-3xl px-6 py-4 cursor-pointer hover:border-amber-200 transition-all dark:bg-stone-700 dark:text-stone-100">
+                            <input type="radio" name="service" value="Заверение печатью переводчика" class="accent-amber-400 peer">
+                            <span class="peer-checked:font-semibold peer-checked:text-amber-700">Заверение печатью переводчика</span>
+                        </label>
+                        <label class="service-label flex items-center gap-3 bg-white border-2 border-transparent rounded-3xl px-6 py-4 cursor-pointer hover:border-amber-200 transition-all dark:bg-stone-700 dark:text-stone-100">
+                            <input type="radio" name="service" value="Фотография на документы" class="accent-amber-400 peer">
+                            <span class="peer-checked:font-semibold peer-checked:text-amber-700">Фотография на документы</span>
+                        </label>
+                        <label class="service-label flex items-center gap-3 bg-white border-2 border-transparent rounded-3xl px-6 py-4 cursor-pointer hover:border-amber-200 transition-all dark:bg-stone-700 dark:text-stone-100">
+                            <input type="radio" name="service" value="Ксерокопия" class="accent-amber-400 peer">
+                            <span class="peer-checked:font-semibold peer-checked:text-amber-700">Ксерокопия</span>
+                        </label>
+                    </div>
+                </div>
+
+                <input type="text" name="name" placeholder="Ваше имя" required class="w-full px-6 py-4 rounded-3xl border border-stone-300 focus:border-amber-600 outline-none bg-white dark:bg-stone-700 dark:border-stone-600 dark:text-stone-100">
+                <input type="text" name="contact" placeholder="Email или Telegram" required class="w-full px-6 py-4 rounded-3xl border border-stone-300 focus:border-amber-600 outline-none bg-white dark:bg-stone-700 dark:border-stone-600 dark:text-stone-100">
+
+                <div class="relative">
+                    <textarea name="message" id="messageField" placeholder="Опишите задачу" maxlength="320" required rows="5"
+                              class="w-full px-6 py-4 rounded-3xl border border-stone-300 focus:border-amber-600 outline-none bg-white dark:bg-stone-700 dark:border-stone-600 dark:text-stone-100"></textarea>
+                    <div id="charCount" class="absolute bottom-4 right-6 text-xs text-stone-400 dark:text-stone-500">0 / 320</div>
+                </div>
+
+                <label class="flex items-center gap-2 text-sm cursor-pointer dark:text-stone-300">
+                    <input type="checkbox" required class="accent-amber-600 w-5 h-5">
+                    <span>Я согласен с <a href="politika-konfidentsialnosti.html" target="_blank" class="underline text-amber-600 dark:text-amber-400">Политикой обработки персональных данных</a></span>
+                </label>
+
+                <button type="submit" 
+                        class="w-full bg-amber-300 hover:bg-amber-400 text-stone-800 py-5 rounded-3xl text-xl font-semibold transition border-2 border-amber-300/60 dark:bg-amber-400 dark:text-stone-900">
+                    Отправить заявку
+                </button>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl p-10 flex flex-col justify-center gap-8 text-xl dark:bg-stone-800 dark:text-stone-100">
+                <!-- контакты остаются как были, только добавлен dark:bg-stone-800 -->
+                <div class="flex items-center gap-4">
+                    <i class="fas fa-envelope text-2xl text-amber-600"></i>
+                    <div><span class="font-medium">Почта:</span><br><span class="text-stone-600 dark:text-stone-400">badgirlmarik@yandex.ru</span></div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <i class="fab fa-telegram text-2xl text-amber-600"></i>
+                    <div><span class="font-medium">Telegram:</span><br><span class="text-stone-600 dark:text-stone-400">@yourusername</span></div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <i class="fas fa-phone text-2xl text-amber-600"></i>
+                    <div><span class="font-medium">Телефон:</span><br><span class="text-stone-600 dark:text-stone-400">+7 (XXX) XXX-XX-XX</span></div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <footer class="bg-stone-800 text-amber-100 py-10 text-center text-sm">
+        © 2026 ФОТО-КОПИ ЦЕНТР. Все права защищены.
+        <div class="mt-4">
+            <a href="politika-konfidentsialnosti.html" class="text-sky-300 hover:text-sky-200 underline">Политика обработки персональных данных</a>
+        </div>
+    </footer>
+
+        <script>
+        fetch('components/header.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('header').innerHTML = html;
+                
+                // ← НОВОЕ: инициализация тумблера после загрузки хедера
+                const toggle = document.getElementById('themeToggle');
+                const icon = document.getElementById('themeIcon');
+                
+                if (!toggle || !icon) return;
+
+                // Применяем сохранённую тему или системную
+                if (localStorage.getItem('theme') === 'dark' || 
+                    (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    toggle.checked = true;
+                    document.documentElement.classList.add('dark');
+                    icon.classList.replace('fa-sun', 'fa-moon');
+                }
+
+                // Переключение
+                toggle.addEventListener('change', () => {
+                    if (toggle.checked) {
+                        document.documentElement.classList.add('dark');
+                        localStorage.setItem('theme', 'dark');
+                        icon.classList.replace('fa-sun', 'fa-moon');
+                    } else {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.setItem('theme', 'light');
+                        icon.classList.replace('fa-moon', 'fa-sun');
+                    }
+                });
+            });
+
+        // Счётчик символов (остаётся как был)
+        const textarea = document.getElementById('messageField');
+        const charCount = document.getElementById('charCount');
+        if (textarea && charCount) {
+            textarea.addEventListener('input', function() {
+                charCount.textContent = `${this.value.length} / 320`;
+            });
+        }
+    </script>
+</body>
+</html>
